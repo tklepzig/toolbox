@@ -1,3 +1,13 @@
+### Run as CLI
+
+Install necessary dependency (only once)
+
+    ./prepare-cli.sh
+
+Run CLI
+
+    ./vicy.sh
+
 ### Transpile for usage in browser
 
     ./transpile.sh
