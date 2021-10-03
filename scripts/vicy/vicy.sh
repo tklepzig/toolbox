@@ -1,9 +1,27 @@
 #!/usr/bin/env zsh
 
-if [ "$#" -ne 3 ]
+if [ -z $1 ]
 then
-	echo "Usage: vicy.sh [e|d] <key> <text|cipher>"
-	exit 1
+    echo "Usage: vicy.sh [e|d]"
+    echo "e - Encrypt"
+    echo "d - Decrypt"
+    exit 1
 fi
 
-npx ts-node vigenere.ts "$1" "$2" "$3"
+echo -n "Key: " 
+read -s key
+echo
+
+if [ "$1" = "e" ]
+then
+    echo -n "Text: " 
+elif [ "$1" = "d" ]
+then
+    echo -n "Cipher: " 
+else
+    echo "Invalid mode"
+    exit 1
+fi
+
+read textOrCipher
+npx ts-node vigenere.ts "$1" "$key" "$textOrCipher"
