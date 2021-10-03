@@ -81,8 +81,8 @@ export const isValidText = (text: string) => {
 
 // @ts-ignore
 if (typeof window === "undefined") {
-  const [mode, key, textOrCipher] = process.argv.slice(2);
-  if (!isValidKey(key, key)) {
+  const [mode, key, keyConfirm, textOrCipher] = process.argv.slice(2);
+  if (!isValidKey(key, keyConfirm)) {
     console.log("Error: Invalid key");
     process.exit(1);
   }

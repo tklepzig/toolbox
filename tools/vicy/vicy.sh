@@ -8,8 +8,12 @@ then
     exit 1
 fi
 
-echo -n "Key: " 
+echo -n "Enter Key: " 
 read -s key
+echo
+
+echo -n "Confirm Key: " 
+read -s keyConfirm
 echo
 
 if [ "$1" = "e" ]
@@ -24,4 +28,4 @@ else
 fi
 
 read textOrCipher
-npx ts-node vigenere.ts "$1" "$key" "$textOrCipher"
+npx ts-node vigenere.ts "$1" "$key" "$keyConfirm" "$textOrCipher"
