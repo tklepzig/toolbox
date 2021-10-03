@@ -1,3 +1,5 @@
+# Vim
+
 [count]<leader>cc |NERDCommenterComment|
 [count]<leader>c<space> |NERDCommenterToggle|
 [count]<leader>ci |NERDCommenterInvert|
@@ -13,7 +15,7 @@ v2i( --> parent level of ()
 v3i( --> parent parent level of ()
 v4i( --> you got it...
 
-# Session Handling
+### Session Handling
 
 Save session (window layout, open buffers, ...): `:mksession [<filename>]`
 Restore session: `vim -S [<filename>]`
@@ -25,15 +27,9 @@ After starting vim, open last edited file (and more when pressing keep hitting `
 
 :set list --> display special chars
 
-# Spell Checking
+:set scrollbind! (alias: scb) --> Toggle sync scroll for current window
 
-See also `:help spell`
-
-Enable:
-
-```
-:setlocal spell spelllang=en
-```
+### Spell Checking
 
 Mark word under cursor as good and add it to your personal spellfile: `zg`
 Open list with suggestions: `z=`
@@ -56,8 +52,3 @@ Edit file in hex mode
 > Use hex syntax highlighting
 >
 >     :set ft=xxd
-
-TODO
-map toggle setlocal spell
-map next misspelled word
-map prev misspelled word
