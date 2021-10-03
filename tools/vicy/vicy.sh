@@ -28,4 +28,4 @@ else
 fi
 
 read textOrCipher
-npx ts-node vigenere.ts "$1" "$key" "$keyConfirm" "$textOrCipher"
+npx ts-node $(dirname "$0")/vigenere.ts "$1" "$key" "$keyConfirm" "$textOrCipher"
