@@ -52,3 +52,16 @@ Edit file in hex mode
 > Use hex syntax highlighting
 >
 >     :set ft=xxd
+
+
+### Regex Samples
+
+    %s/Blubb\(\u\)/\L\1/g
+
+Match `Blubb`, followed by a upper-case character. Will remove `Blubb` and convert to upper-case character to lower case.
+> To convert from lower-case to upper-case, use `\U`
+
+> See https://vim.fandom.com/wiki/Changing_case_with_regular_expressions
+
+
+
