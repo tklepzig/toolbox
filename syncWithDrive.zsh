@@ -7,4 +7,4 @@ then
 fi
 
 toolboxDir=$HOME/.toolbox
-rsync -avz --stats --delete --exclude  ".git" "$toolboxDir/" "$1/toolbox"
+rsync -avz --stats --delete --filter="dir-merge,- .gitignore" --exclude  ".git" "$toolboxDir/" "$1/toolbox"
