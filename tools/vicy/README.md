@@ -23,4 +23,4 @@ Use the makefile of certificates/ to create a valid ssl certificate and rootCA
 it is available offline and the rootCA is not necessary anymore)
 and run the following (also from certificates/)
 
-    ./serve.sh <certName>
+    ./serve.sh <certName> ../vicy
