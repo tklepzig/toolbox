@@ -5,6 +5,8 @@
 - zP - Toggle dir preview
 - r - run (select from list or enter cmd)
 - yy - copy
+- yd - copy current dir to clipboard
+- yp - copy current path to clipboard
 - pp - paste
 - dd - cut
 - dD - delete
