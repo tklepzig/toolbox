@@ -1,6 +1,13 @@
+Install package
+
+    sudo pacman -S
+
+> **Never use `-Sy` to avoid partial upgrades**  
+> Only upgrade the system at once with `-Syu`
+
 Remove packages
 
-    sudo pacman -Rcs
+    sudo pacman -R
 
 Lists all packages that were installed as a dependency and are no longer needed
 
