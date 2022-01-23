@@ -13,6 +13,7 @@
 - V - mark files
 - v - toggle marked files
 - space - mark current file and jump to next one
+- uv - unmark everything
 - i - preview file
 - a - rename
 - g - goto locations, tab handling
