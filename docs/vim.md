@@ -66,3 +66,20 @@ Match `Blubb`, followed by a upper-case character. Will remove `Blubb` and conve
 ### Insert special characters
 
 While in insert mode, press <kbd>Ctrl</kbd> + <kbd>k</kbd> followed by a two-char lookup code (see `:dig`)
+
+### Visual Selection
+
+Reselect last visual selection
+
+    gv
+
+### Changes
+
+See changes of file
+
+    :changes
+
+Jump between them
+
+    g; - backwards
+    g, - forwards
