@@ -1,5 +1,32 @@
 # Install Arch Linux
 
+<!-- vim-markdown-toc GFM -->
+
+* [Setup live system](#setup-live-system)
+* [BIOS or UEFI?](#bios-or-uefi)
+* [Create partitions and mount them](#create-partitions-and-mount-them)
+    * [Without encryption](#without-encryption)
+    * [With encrypted root partition](#with-encrypted-root-partition)
+* [Package Installation](#package-installation)
+* [System Setup](#system-setup)
+    * [Boot Loader](#boot-loader)
+        * [With Encryption](#with-encryption)
+        * [BIOS](#bios)
+        * [UEFI](#uefi)
+        * [Enable processor-specific microcode updates](#enable-processor-specific-microcode-updates)
+* [Post-Installation](#post-installation)
+* [Additional stuff](#additional-stuff)
+    * [Add keyfile in addition to passphrase to decrypt root partition](#add-keyfile-in-addition-to-passphrase-to-decrypt-root-partition)
+        * [Unlocking the root partition at boot](#unlocking-the-root-partition-at-boot)
+    * [GRUB Hidden Menu](#grub-hidden-menu)
+    * [How to power off properly](#how-to-power-off-properly)
+    * [Using iwctl instead of `networkmanager` and `wpa_supplicant`](#using-iwctl-instead-of-networkmanager-and-wpa_supplicant)
+    * [Boot into BIOS/UEFI](#boot-into-biosuefi)
+    * [Systemd Timers](#systemd-timers)
+* [References](#references)
+
+<!-- vim-markdown-toc -->
+
 ### Setup live system
 
 Keyboard layout
