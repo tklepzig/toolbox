@@ -1,5 +1,16 @@
 # Vim
 
+<!-- vim-markdown-toc GFM -->
+
+* [Session Handling](#session-handling)
+* [Spell Checking](#spell-checking)
+* [Regex Samples](#regex-samples)
+* [Insert special characters](#insert-special-characters)
+* [Visual Selection](#visual-selection)
+* [Changes](#changes)
+
+<!-- vim-markdown-toc -->
+
 [count]<leader>cc |NERDCommenterComment|
 [count]<leader>c<space> |NERDCommenterToggle|
 [count]<leader>ci |NERDCommenterInvert|
@@ -72,6 +83,10 @@ While in insert mode, press <kbd>Ctrl</kbd> + <kbd>k</kbd> followed by a two-cha
 Reselect last visual selection
 
     gv
+
+Toggle between expanding selection at the end or beginning
+
+    o
 
 ### Changes
 
