@@ -23,6 +23,7 @@
     * [Using iwctl instead of `networkmanager` and `wpa_supplicant`](#using-iwctl-instead-of-networkmanager-and-wpa_supplicant)
     * [Boot into BIOS/UEFI](#boot-into-biosuefi)
     * [Systemd Timers](#systemd-timers)
+* [Upgrade System](#upgrade-system)
 * [References](#references)
 
 <!-- vim-markdown-toc -->
@@ -393,6 +394,11 @@ Instead of installing `networkmanager` and `wpa_supplicant`:
     TODO
 
 > https://wiki.archlinux.de/title/Systemd/Timers
+
+### Upgrade System
+
+    sudo pacman -Syu
+    yay -Syu
 
 ### References
 
