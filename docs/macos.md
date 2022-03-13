@@ -21,13 +21,17 @@
 
 # Use touch id for sudo
 
+    # To enable it also while in tmux
+    brew install pam-reattach
+
     # Make file writable
     sudo chmod 644 /etc/pam.d/sudo
 
     # Open the sudo utility
     sudo vi /etc/pam.d/sudo
 
-    # Add the following as the first line
+    # Add the following as the first two lines
+    auth optional /opt/homebrew/lib/pam/pam_reattach.so
     auth sufficient pam_tid.so
 
 # Hide Dock completely
