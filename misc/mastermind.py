@@ -1,4 +1,5 @@
-# use python3 (e.g. 3.9.4)
+#!/usr/bin/env python3
+
 from random import randint
 import random
 
