@@ -98,3 +98,8 @@ Jump between them
 
     g; - backwards
     g, - forwards
+
+TODO
+set textwidth
+gq
+:ce, :le, :re
