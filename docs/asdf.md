@@ -33,3 +33,15 @@ Reshim plugin to create shims for newly added executables (e.g. after a `pip ins
 ```
 asdf reshim python
 ```
+
+Update asdf itself to new version
+
+    asdf update
+
+Update available versions of plugin ruby
+
+    asdf plugin update ruby
+
+Update available versions of all installed plugins
+
+    asdf plugin update --all
