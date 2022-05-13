@@ -283,7 +283,7 @@ Setup WiFi, Keyboard Layout, etc.
 Additional Software (run as non-privileged user)
 
     sudo pacman -S xclip the_silver_searcher ranger tig fzf lynx xdotool exa peco sshfs pwgen mat2 btop
-    sudo pacman -S nautilus gparted eog gnome-tweaks gdmap evince
+    sudo pacman -S nautilus gparted eog gnome-tweaks gdmap texlive-core texlive-latexextra evince
     sudo pacman -S easytag audacity gimp vlc pqiv git-delta jless
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
@@ -298,7 +298,7 @@ Additional Software (run as non-privileged user)
     makepkg -si
     cd -
 
-    yay -S google-chrome seafile-client winff
+    yay -S google-chrome seafile-client winff tllocalmgr-git
 
 > Upgrade with yay:
 >
