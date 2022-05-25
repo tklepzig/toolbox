@@ -74,6 +74,10 @@ Match `Blubb`, followed by a upper-case character. Will remove `Blubb` and conve
 
 > See https://vim.fandom.com/wiki/Changing_case_with_regular_expressions
 
+    %s/Blubb/\=@a/g
+
+Replace `Blubb` with contents of register `a`.
+
 ### Insert special characters
 
 While in insert mode, press <kbd>Ctrl</kbd> + <kbd>k</kbd> followed by a two-char lookup code (see `:dig`)
