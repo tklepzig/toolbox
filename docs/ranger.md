@@ -17,6 +17,7 @@
 - i - preview file
 - a - rename
 - g - goto locations, tab handling
+- Alt + 1-9 - go to (or create) tab 1-9
 - Tab - Switch tab (alternative to gt/gT)
 - M - different options which info to show for each file/dir
 - ~ - Toggle view mode (default vs mc-like)
