@@ -107,3 +107,14 @@ TODO
 set textwidth
 gq
 :ce, :le, :re
+
+For every line containing "good" substitute all "bad" with "ugly". Of course, this can be easily done in Vim.
+
+Here’s how to do it:
+
+    :g/good/s/bad/ugly/g
+
+Let’s break it down:
+
+:g/good/ - this part will match lines containing a word "good" in the entire buffer.
+s/bad/ugly/g - is a substitute command which replaces "bad" with "ugly" in all occurrences, on previously matched lines (with the first part of the command).
