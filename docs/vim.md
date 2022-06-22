@@ -118,3 +118,7 @@ Let’s break it down:
 
 :g/good/ - this part will match lines containing a word "good" in the entire buffer.
 s/bad/ugly/g - is a substitute command which replaces "bad" with "ugly" in all occurrences, on previously matched lines (with the first part of the command).
+
+Execute normal command (append `;`) on all lines which starts with `require`
+
+    g/^require/norm A;
