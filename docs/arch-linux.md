@@ -24,6 +24,7 @@
     * [Boot into BIOS/UEFI](#boot-into-biosuefi)
     * [Systemd Timers](#systemd-timers)
 * [Upgrade System](#upgrade-system)
+* [Bluetooth Troubleshooting](#bluetooth-troubleshooting)
 * [References](#references)
 
 <!-- vim-markdown-toc -->
@@ -399,6 +400,21 @@ Instead of installing `networkmanager` and `wpa_supplicant`:
 
     sudo pacman -Syu
     yay -Syu
+
+### Bluetooth Troubleshooting
+
+Reload bluetooth controller
+
+    modprobe -r btusb
+    modprobe btusb
+
+Remove any possible bluetooth device blocks
+
+    sudo rfkill block bluetooth && sleep 0.1 && sudo rfkill unblock bluetooth
+
+Restart bluetooth via bluetoothctl
+
+    echo -e 'show\npower off\npower on\nquit' | bluetoothctl
 
 ### References
 
