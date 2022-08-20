@@ -122,3 +122,8 @@ s/bad/ugly/g - is a substitute command which replaces "bad" with "ugly" in all o
 Execute normal command (append `;`) on all lines which starts with `require`
 
     g/^require/norm A;
+
+TODO redir
+:redir @a
+:command
+:redir END
