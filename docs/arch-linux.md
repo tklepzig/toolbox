@@ -24,6 +24,8 @@
     * [Boot into BIOS/UEFI](#boot-into-biosuefi)
     * [Systemd Timers](#systemd-timers)
 * [Upgrade System](#upgrade-system)
+    * [Troubleshooting](#troubleshooting)
+        * [File /var/cache/pacman/pkg/something.tar.xz is corrupted (invalid or corrupted package (PGP signature)).](#file-varcachepacmanpkgsomethingtarxz-is-corrupted-invalid-or-corrupted-package-pgp-signature)
 * [Bluetooth Troubleshooting](#bluetooth-troubleshooting)
 * [References](#references)
 
@@ -401,12 +403,22 @@ Instead of installing `networkmanager` and `wpa_supplicant`:
     sudo pacman -Syu
     yay -Syu
 
+#### Troubleshooting
+
+##### File /var/cache/pacman/pkg/something.tar.xz is corrupted (invalid or corrupted package (PGP signature)).
+
+That means that the package integrity cannot be checked by its PGP signature. Often the reason is that you may have done the previous update a while ago. In the meantime some keys by Arch developers may have changed, and some new updates are signed with the new (PGP) keys.
+
+Update the keyring
+
+    sudo pacman -Sy archlinux-keyring
+
 ### Bluetooth Troubleshooting
 
 Reload bluetooth controller
 
-    modprobe -r btusb
-    modprobe btusb
+    sudo modprobe -r btusb
+    sudo modprobe btusb
 
 Remove any possible bluetooth device blocks
 
