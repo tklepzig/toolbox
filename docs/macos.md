@@ -4,19 +4,21 @@
 
 # Remap Keys
 
-    # right cmd -> right ctrl
-    # left ctrl -> fn
-    # fn -> left ctrl
-    hidutil property --set '{"UserKeyMapping": [
-    {"HIDKeyboardModifierMappingSrc":0x7000000e7, "HIDKeyboardModifierMappingDst":0x7000000e4},
-    {"HIDKeyboardModifierMappingSrc":0x7000000e0, "HIDKeyboardModifierMappingDst":1095216660483},
-    {"HIDKeyboardModifierMappingSrc":1095216660483, "HIDKeyboardModifierMappingDst":0x7000000e0},
-    ]}' > /dev/null
+    swapKeys() {
+      # right cmd -> right ctrl
+      # left ctrl -> fn
+      # fn -> left ctrl
+      hidutil property --set '{"UserKeyMapping": [
+          {"HIDKeyboardModifierMappingSrc":0x7000000e7, "HIDKeyboardModifierMappingDst":0x7000000e4},
+          {"HIDKeyboardModifierMappingSrc":0x7000000e0, "HIDKeyboardModifierMappingDst":1095216660483},
+          {"HIDKeyboardModifierMappingSrc":1095216660483, "HIDKeyboardModifierMappingDst":0x7000000e0},
+      ]}' > /dev/null
+    }
 
-> Restore defaults
->
->     hidutil property --set '{"UserKeyMapping":[]}'
->
+    resetSwap() {
+      hidutil property --set '{"UserKeyMapping":[]}'
+    }
+
 > https://developer.apple.com/library/archive/technotes/tn2450/_index.html
 
 # Use touch id for sudo
