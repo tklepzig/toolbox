@@ -1,4 +1,5 @@
 # Toolbox - Docs
+- [anti-scam](anti-scam.md)
 - [apo](apo.md)
 - [arch-linux](arch-linux.md)
 - [asdf](asdf.md)
@@ -13,6 +14,7 @@
 - [git](git.md)
 - [gnome](gnome.md)
 - [gpg](gpg.md)
+- [js-snippets](js-snippets.md)
 - [keychron](keychron.md)
 - [kitty](kitty.md)
 - [latex](latex.md)
@@ -24,6 +26,7 @@
 - [pulseaudio](pulseaudio.md)
 - [python](python.md)
 - [ranger](ranger.md)
+- [raspberrypi-os](raspberrypi-os.md)
 - [redshift](redshift.md)
 - [ruby](ruby.md)
 - [smart](smart.md)
