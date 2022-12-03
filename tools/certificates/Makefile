@@ -23,7 +23,7 @@ $(NAME).rootCA.key:
 
 # Create and self sign root certificate
 $(NAME).rootCA.crt: $(NAME).rootCA.key
-	echo -e "$(COUNTRY)\n$(STATE)\n\n$(COMPANY)\n\n\n\n" | openssl req -x509 -new -nodes -key $(NAME).rootCA.key -sha256 -days 1024 -out $@
+	echo -e "$(COUNTRY)\n$(STATE)\n\n$(COMPANY)\n\n\n\n" | openssl req -x509 -new -nodes -key $(NAME).rootCA.key -sha256 -days 1825 -out $@
 
 $(DOMAIN).key:
 	openssl genrsa -out $@ 2048
@@ -47,7 +47,7 @@ $(DOMAIN).san.conf:
 
 $(DOMAIN).crt: $(NAME).rootCA.key $(NAME).rootCA.crt $(DOMAIN).csr $(DOMAIN).san.conf
 	openssl x509 -req -in $(DOMAIN).csr -CA ./$(NAME).rootCA.crt -CAkey ./$(NAME).rootCA.key \
-		-CAcreateserial -out $@ -days 500 -sha256 \
+		-CAcreateserial -out $@ -days 1825 -sha256 \
 		-extfile $(DOMAIN).san.conf -extensions req_ext
 
 # verify the certificate
