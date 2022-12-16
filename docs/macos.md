@@ -43,3 +43,7 @@
 > Back to defaults:
 >
 >     defaults delete com.apple.Dock autohide-delay && killall Dock
+
+# Restart Window Manager
+
+    killall -KILL Dock
