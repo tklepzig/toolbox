@@ -23,6 +23,7 @@
     * [Using iwctl instead of `networkmanager` and `wpa_supplicant`](#using-iwctl-instead-of-networkmanager-and-wpa_supplicant)
     * [Boot into BIOS/UEFI](#boot-into-biosuefi)
     * [Systemd Timers](#systemd-timers)
+    * [Prevent going to sleep while running a program](#prevent-going-to-sleep-while-running-a-program)
 * [Upgrade System](#upgrade-system)
     * [Troubleshooting](#troubleshooting)
         * [File /var/cache/pacman/pkg/something.tar.xz is corrupted (invalid or corrupted package (PGP signature)).](#file-varcachepacmanpkgsomethingtarxz-is-corrupted-invalid-or-corrupted-package-pgp-signature)
@@ -397,6 +398,16 @@ Instead of installing `networkmanager` and `wpa_supplicant`:
     TODO
 
 > https://wiki.archlinux.de/title/Systemd/Timers
+
+#### Prevent going to sleep while running a program
+
+Useful e.g. when playing audio/video and avoid going to suspend while playing
+
+    gnome-session-inhibit --inhibit suspend /path/to/program
+
+> e.g. for VLC
+>
+>     gnome-session-inhibit --inhibit suspend vlc
 
 ### Upgrade System
 
