@@ -18,3 +18,9 @@ Restore the file
 >
 >     g cat-file -p <SHA>:./path/to/file
 >     git checkout <SHA> -- path/to/file
+
+### Change base branch
+
+Given you're working on a branch called `feature` and you want to change the base from `oldBase` to `newBase`
+
+    git rebase --onto newBase oldBase feature
