@@ -30,3 +30,15 @@ Create file `userconf` in root of boot partition of sd card (fill in the necessa
     pi:<encrypted password>
 
 For getting encrypted password, run `echo 'mypassword' | openssl passwd -6 -stdin`
+
+## VNC
+
+show the same screen on hdmi and vncclient
+
+    sudo apt-get install x11vnc
+    x11vnc -display :0 [ -usepw -listen IP_of_pi -allow allowed_ip_address ]
+
+> -display : screen number to get
+> -usepw   : use password security
+> -listen  : IP address of server (Pi IP)
+> -allow   : allowed client IPs (client IP, in your case Mac IP address)
