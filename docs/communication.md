@@ -84,3 +84,8 @@
 - Lautstärke, Tonhöhe. Geschw. wechseln, Körper bewegen -> Mimik, Gestik
 - Auch lustige Tonhöhen, etc. (Personen mimen) nutzen -> man zeigt sich "verletzlich" -> bessere Sympathie im Publikum
 
+# Vermeiden
+
+- "Lieblingswörter"
+  - actually
+- Den Blick nicht ständig zwischen Publikum und Präsentation wechseln wenn sich die Slide gar nicht geändert hat
