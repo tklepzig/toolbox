@@ -8,6 +8,7 @@
 * [Insert special characters](#insert-special-characters)
 * [Visual Selection](#visual-selection)
 * [Changes](#changes)
+* [Calculations](#calculations)
 
 <!-- vim-markdown-toc -->
 
@@ -127,3 +128,13 @@ TODO redir
 :redir @a
 :command
 :redir END
+
+### Calculations
+
+To pipe the current line to bc and replace with it with the result, type (in normal mode):
+
+    .!bc
+
+To pipe the lines that are currently selected in visual mode to bc and replace with it with the result:
+
+    !bc
