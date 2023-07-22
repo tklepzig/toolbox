@@ -410,6 +410,10 @@ Useful e.g. when playing audio/video and avoid going to suspend while playing
 >
 >     gnome-session-inhibit --inhibit suspend vlc
 
+or only inhibit, without starting a program
+
+    gnome-session-inhibit --inhibit suspend --inhibit-only
+
 ### Upgrade System
 
     sudo pacman -Syu
