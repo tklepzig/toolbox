@@ -4,6 +4,6 @@ node_modules/
 *.csr
 *.key
 *.srl
-package*.json
+package-lock.json
 style.min.css
 vigenere.js
