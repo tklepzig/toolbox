@@ -23,10 +23,3 @@ info "Cloning Repo..."
 rm -rf $toolboxDir
 git clone --depth=1 https://github.com/tklepzig/toolbox.git $toolboxDir > /dev/null 2>&1
 success "Done."
-
-source $toolboxDir/alias.zsh
-
-cd $toolboxDir/tools/vicy
-npm i
-npm run build
-cd -
