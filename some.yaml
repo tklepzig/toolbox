@@ -1,0 +1,13 @@
+---
+echo-1: echo 1
+echo-2:
+  cmd: echo "$1 und $2"
+  help: |-
+    Some multiline
+    help
+  params:
+    - P1
+    - P2
+echo-3: |-
+  echo "A multiline"
+  echo "command"
