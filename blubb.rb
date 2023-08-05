@@ -27,6 +27,12 @@
 # cmd=$(./blubb.rb | fzf --ansi) && echo ${cmd%#*} | xargs
 # cmd=$(./blubb.rb | fzf --ansi) && cmd=$(echo ${cmd%#*} | xargs) && $cmd
 
+# def get_command(string_or_hash)
+# return string_or_hash if string_or_hash.is_a?(String)
+
+# string_or_hash['cmd']
+# end
+
 require 'yaml'
 commands = YAML.load_file('some.yaml')
 
@@ -34,6 +40,14 @@ if ARGV[0] == '--list'
   puts commands.keys
   exit 0
 end
+
+# Discarded idea descriptions
+# if ARGV[0] == '-d' || ARGV[0] == '--descs'
+# commands.each_key do |key|
+# puts "#{key} -- #{get_command(commands[key]).sub(/\n.*/m, '...')}"
+# end
+# exit 0
+# end
 
 cmd_id = ARGV[0]
 
@@ -48,6 +62,7 @@ if commands[cmd_id].is_a?(String)
     exit 1
   end
   puts(commands[cmd_id])
+  exit 1 if ARGV[ARGV.length - 1] == '-n'
   exit 0
 end
 
@@ -74,3 +89,4 @@ if commands[cmd_id].key?('params')
 end
 
 puts cmd
+exit 1 if ARGV[ARGV.length - 1] == '-n'

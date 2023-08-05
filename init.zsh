@@ -4,7 +4,12 @@
 # (important: use source, not ./ to avoid subshell which won't register the completion at all)
 cmds=( $(./blubb.rb --list) )
 
+# Discarded idea: Add descriptions to completion
+## ${(f)...} --> parameter expansion, split at new lines
+#descs=( ${(f)"$(./blubb.rb --descs)"} )
+
 function blubb_completion {
+	#compadd -d descs -a cmds
 	compadd -a cmds
 }
 
