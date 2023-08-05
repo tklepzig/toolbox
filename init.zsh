@@ -23,6 +23,7 @@ function \# {
 		args=( $@ )
 	fi
 
+  # TODO add option to run ruby scripts (e.g. having type: ruby in yaml)
 	cmd=$(./blubb.rb $args)
 	[ $? -ne 0 ] && echo "$cmd" || eval $cmd
 }
