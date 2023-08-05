@@ -33,6 +33,7 @@
 # string_or_hash['cmd']
 # end
 
+# TODO: Add view option to list all commands and their code?
 require 'yaml'
 commands = YAML.load_file('some.yaml')
 
