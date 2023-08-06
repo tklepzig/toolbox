@@ -29,7 +29,10 @@ function \# {
 		echo "$cmd"
 	else
 		[ $# -ne 0 ] && shift
+
 		# TODO absolute path
+		first_line=$(head -n 1 "./scripts/$cmd")
+		[[ $first_line != \#!* ]] && echo "Error: $cmd is missing a proper shebang line" && return 1
 		"./scripts/$cmd" $@
 	fi
 }
