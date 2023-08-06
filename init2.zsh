@@ -8,14 +8,14 @@ cmds=( $(./blubb2.rb --list) )
 ## ${(f)...} --> parameter expansion, split at new lines
 #descs=( ${(f)"$(./blubb.rb --descs)"} )
 
-function blubb2_completion {
+blubb2_completion() {
 	#compadd -d descs -a cmds
 	compadd -a cmds
 }
 
 compdef blubb2_completion \#
 
-function \# {
+\#() {
 	if [ $# -eq 0 ]
 	then
 		args=$(printf "%s\n" "${cmds[@]}" | fzf | awk '{print $1}')
