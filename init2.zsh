@@ -37,3 +37,14 @@ compdef blubb2_completion \#
 	fi
 }
 
+
+# global stuff
+isOS()
+{
+  if [[ "$OSTYPE:l" == *"$1:l"* ]]
+  then
+    return 0;
+  fi
+
+  return 1;
+}
